@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+</head>
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    background-color:whitesmoke; 
+    margin: 0;
+    padding: 0;
+}
+
+#container3 {
+    max-width: 600px;
+    margin: 50px auto;
+    background:grey;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#header3 {
+    text-align: center;
+    color: black;
+}
+
+#description3 {
+    text-align: center;
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+input[type="text"]#name3,
+input[type="email"]#email3,
+textarea#feedback3,
+select#rating3 {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button#submit3 {
+    width: 100%;
+    padding: 10px;
+    background-color:ghostwhite;
+    border: none;
+    border-radius: 4px;
+    color: rgb(5, 1, 1);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button#submit3:hover {
+    background-color:rgb(106, 95, 95);
+}
+
+
+</style>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="topnav">
+        <a href="main.html"><img id="i1" src="logo.png" alt="" /></a>
+        <a class="active n" href="index.html">Home</a>
+        <a class="n" href="gallery.html">Gallery</a>
+        <a class="n" href="about.html">About</a>
+        <a class="n" href="blog.html">Blog</a>
+          
+      </div>
+  
+      
+
+      
+      <div id="container3">
+        <h1 id="header3">We Value Your Feedback</h1>
+        <p id="description3">Please let us know your thoughts and suggestions.</p>
+        <form id="feedback-form3" action="/submit-feedback" method="POST">
+            <div class="form-group" id="form-group-name3">
+                <label for="name3">Name</label>
+                <input type="text" id="name3" name="name" required>
+            </div>
+            <div class="form-group" id="form-group-email3">
+                <label for="email3">Email</label>
+                <input type="email" id="email3" name="email" required>
+            </div>
+            <div class="form-group" id="form-group-feedback3">
+                <label for="feedback3">Feedback</label>
+                <textarea id="feedback3" name="feedback" rows="5" required></textarea>
+            </div>
+            <div class="form-group" id="form-group-rating3">
+                <label for="rating3">Rating</label>
+                <select id="rating3" name="rating" required>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+            </div>
+            <button type="submit" id="submit3">Submit Feedback</button>
+        </form>
+    </div>
+
+
+
+    <footer style="background-color: grey; color: white; padding: 20px 0; margin-top: 20px;">
+        <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <!-- Company Info -->
+            <div style="flex: 1; min-width: 250px; padding: 20px;">
+                <h3 style="margin-bottom: 15px;">About Us</h3>
+                <p> Welcome to Photography Colony, a friendly community for everyone who loves taking photos. We offer simple tips, gear reviews, and a space to share your work and get inspired. Join us and be part of a supportive group that celebrates the joy of photography.</p>
+            </div>
+            
+            <!-- Useful Links -->
+            <div style="flex: 1; min-width: 250px; padding: 20px;">
+                <h3 style="margin-bottom: 15px;">Useful Links</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><a href="main.html" style="color: white; text-decoration: none;">Home</a></li>
+                    <li style="margin-bottom: 10px;"><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+                    <li style="margin-bottom: 10px;"><a href="http://localhost/batch3_evening/create1.php" style="color: white; text-decoration: none;">Signup</a></li>
+                    <li style="margin-bottom: 10px;"><a href="gallery.html" style="color: white; text-decoration: none;">Gallery</a></li>
+                    <li style="margin-bottom: 10px;"><a href="blog.html" style="color: white; text-decoration: none;">Blog</a></li>
+                </ul>
+            </div>
+            
+            <!-- Social Media -->
+            <div style="flex: 1; min-width: 250px; padding: 0px;">
+                <h3 style="margin-bottom: 15px; ">Follow Us</h3>
+                <div>
+                    <a href="#" style="margin-right: 1px;"><img src="facebook.png" alt="Facebook" style="width: 26; height: 25px; "></a>
+                    <a href="#" style="margin-right: 1px;"><img src="twitter.png" alt="Twitter" style="width: 26; height: 25px; "></a>
+                    <a href="#" style="margin-right: 1px;"><img src="instragram.png" alt="Instagram" style="width: 26; height: 25px; "></a>
+                    <a href="#"><img src="linkedin.png" alt="LinkedIn" style="width: 26; height: 25px; "></a>
+                </div>
+            </div>
+            
+            <!-- Partner Logos -->
+            <div style="flex: 1; min-width: 250px; padding: 20px;">
+                <h3 style="margin-bottom: 15px;">Our Partners</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <img src="profile3.jpg" alt="Partner 1" style="width: 60px; height: 50px;">
+                    <img src="profile4.jpg" alt="Partner 2" style="width: 60px; height: 50px;">
+                   
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div style="text-align: center; padding: 10px; background-color:rgb(106, 95, 95) ;">
+            <p style="margin: 0;">&copy; 2024 Your Company Name. All Rights Reserved.</p>
+        </div>
+      </footer>
+    <script src="feedback.js"></script>
+</body>
+</html>

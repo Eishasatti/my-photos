@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<style>
+div.gallery {
+  margin: 27px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+  overflow: hidden; 
+}
+
+div.gallery:hover {
+  box-shadow: 2px 3px 6px black;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in-out; 
+}
+div.gallery:hover img {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+  <div class="topnav">
+    <a  href="main.html"><img id="i1" src="logo.png" alt=""></a>
+    <a  class="active n" href="index.html">Home</a>
+    <a class="n" href="feedback.html">Feedback</a>
+    <a class="n" href="about.html">About</a>
+    <a class="n" href="blog.html">Blog</a>
+  
+
+    <div id="d1">
+      <div id="banner">localtime</div>
+      <div id="clock"></div>
+    </div>
+    <input
+      id="s1"
+      type="text"
+      placeholder="Search.."
+      onkeydown="search(event)"
+    />
+  </div>
+  <div id="container" class="container">
+    <div class="iframe-container">
+      <iframe id="blogFrame" src=""></iframe>
+    </div>
+    <div class="iframe-container">
+      <iframe id="imagesFrame" src=""></iframe>
+    </div>
+  </div>
+  
+<div class="gallery">
+  <a target="_blank" href="https://www.google.com/search?q=nature+photography&sca_esv=802af0fa366b15fd&udm=2&ei=dRJTZvL7K_y79u8P55aw4AM&ved=0ahUKEwiyirOjkauGAxX8nf0HHWcLDDwQ4dUDCBA&uact=5&oq=nature+photography&gs_lp=Egxnd3Mtd2l6LXNlcnAiEm5hdHVyZSBwaG90b2dyYXBoeTINEAAYgAQYsQMYQxiKBTIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEj8K1DXA1iuJnABeACQAQCYAeoCoAHvJKoBBjItMTYuM7gBA8gBAPgBAZgCB6ACqA7CAgoQABiABBhDGIoFwgIEEAAYA8ICBhAAGAcYHpgDAIgGAZIHBzEuMC4zLjOgB9J5&sclient=gws-wiz-serp">
+    <img src="nature.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Nature Photography</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://www.google.com/search?sca_esv=802af0fa366b15fd&q=architectural+photography&uds=ADvngMhPyO5YHS0LBNKxvUmN-jNjNyNB0MPtNjwtJIXjumMadbHXjZjU624u9ZSYv7Vg6T_t09u1YVD_BoysYLpXyxEH2pXi73molN2Uo7C17ej1lWGDoYGbk6NL8CVcr5AJBpErjW1Z2wCDS34JrAyvEPMrK-0kzvQXvOD2Cki6gfHC4FzRI4R5s8hsx2wC_7SCcQ1TUX-JIQ2ABMGOZRVURx_Hbtj3ltigQusSgELVS4DwryuBw1yD786v1_nyvzbGk4jipC8etqVRp8y5ag0YTo0FjGnxj9UseQwINT3Oq6uUDyKxYAtj3S11vlqqVj4MgUJsLzNk&udm=2&prmd=ivsnbz&sa=X&ved=2ahUKEwirhbf1kKuGAxWuhv0HHTW2A-EQtKgLegQIDRAB#vhid=isPSfrpGGCL72M&vssid=mosaic">
+    <img src="archictectural.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Architectural Photography</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://www.google.com/search?q=+fashion+photography&sca_esv=f874127852d0764a&udm=2&biw=1280&bih=593&ei=CAxTZsOZEvuTxc8Pu6yo2AQ&ved=0ahUKEwjDveaSi6uGAxX7SfEDHTsWCksQ4dUDCBA&uact=5&oq=+fashion+photography&gs_lp=Egxnd3Mtd2l6LXNlcnAiFCBmYXNoaW9uIHBob3RvZ3JhcGh5MgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEiLDlCMA1j1BnABeACQAQCYAfABoAGRB6oBAzItNLgBA8gBAPgBAZgCAqAC-QGYAwCIBgGSBwUxLjAuMaAHsB0&sclient=gws-wiz-serp#vhid=GZhYmqN4PSfeXM&vssid=mosaic">
+    <img src="fashion.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Fashion Photography</div>
+</div>
+
+
+<div class="gallery">
+  <a target="_blank" href="https://www.google.com/search?sca_esv=802af0fa366b15fd&q=event+photography&uds=ADvngMheOmbKXuot3eKf9UrhvKugh6GX82JTtlmx6pHNTu65e1BLTCZqhNj224mas8WRd6xID7yy241448vjGU3jpKZUuVJi9BsMN4haIMN4QrHwDsrhcjWWfSFxsGVkNd-X02PGJkIOM7n-jp_6adF1M8EyyCm-bFhcOsti2vu49Hb1TT8VH5epjLvT3YXWgznTNfEbIxQQjB73LKXy6QQjq2s76ZIj59Hh-ac_3giK1_je0PSG_yrEmVK4VGRcG4WL2D9nm3dn8pMgWUj39tCtAX4SGFOclUy2UvnJM6hbjVlHHv8TCbs&udm=2&prmd=ivnsbz&sa=X&ved=2ahUKEwiR6Y7ojauGAxX3_rsIHQDNCuwQtKgLegQICxAB&biw=1280&bih=593&dpr=1.5">
+    <img src="event.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Event Photography</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://www.google.com/search?q=wildlife&sca_esv=2c0e196c24e4d229&udm=2&biw=1280&bih=593&ei=6fxSZqvUJ4iGxc8Pu-6J4AQ&ved=0ahUKEwjr7JDd_KqGAxUIQ_EDHTt3AkwQ4dUDCBA&uact=5&oq=wildlife&gs_lp=Egxnd3Mtd2l6LXNlcnAiCHdpbGRsaWZlMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARI-0dQzgNY40FwAngAkAEEmAHmBKAB9RyqAQswLjEuOC4yLjAuMrgBA8gBAPgBAZgCCqAC1RaoAgDC">
+    <img src="wildlife1.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Wildlife Photography</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://www.google.com/search?q=portrait+photography&sca_esv=f874127852d0764a&udm=2&biw=1280&bih=593&ei=1whTZo_zFMqQxc8PkZ-myAY&oq=portrait&gs_lp=Egxnd3Mtd2l6LXNlcnAiCHBvcnRyYWl0KgIIADIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTINEAAYgAQYsQMYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBUipMlDrEljgInABeACQAQCYAZYCoAGJDqoBAzItOLgBA8gBAPgBAZgCCKACxg6oAgDCAggQABiABBixA8ICDhAAGIAEGLEDGIMBGIoFmAMCkgcDMi04oAetLA&sclient=gws-wiz-serp">
+    <img src="portrait.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Portrait Photography</div>
+</div>
+
+<div class="gallery">
+  <a  target="_blank" href="https://www.google.com/search?q=documentary+photography&sca_esv=f874127852d0764a&udm=2&biw=1280&bih=593&ei=lAhTZtT0G6z_7_UP-sGQ4Ao&oq=documentary&gs_lp=Egxnd3Mtd2l6LXNlcnAiC2RvY3VtZW50YXJ5KgIIADIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEicOlDdA1ifKXACeACQAQSYAcICoAHZHKoBBjItMTUuMbgBA8gBAPgBAZgCDaACxRaoAgDCAggQABiABBixA8ICDRAAGIAEGLEDGEMYigXCAgQQABgDmAMBiAYBkgcIMS4wLjExLjGgB-1U&sclient=gws-wiz-serp">
+    <img src="documentary.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Documentary Photography</div>
+</div>
+
+
+<div class="gallery">
+  <a target="_blank" href="https://www.google.com/search?q=street+photography+of+width+600+and+height+400&sca_esv=2c0e196c24e4d229&udm=2&biw=1280&bih=593&ei=LP9SZurPLdWM7NYP4426uAE&ved=0ahUKEwjqlaLx_qqGAxVVBtsEHeOGDhcQ4dUDCBA&uact=5&oq=street+photography+of+width+600+and+height+400&gs_lp=Egxnd3Mtd2l6LXNlcnAiLnN0cmVldCBwaG90b2dyYXBoeSBvZiB3aWR0aCA2MDAgYW5kIGhlaWdodCA0MDBI57EBULEDWNKtAXADeACQAQCYAZoCoAGEMqoBBjAuNy4yM7gBA8gBAPgBAZgCBaACtQbCAgoQABiABBhDGIoFwgIFEAAYgATCAgYQABgIGB7CAgcQABiABBgYmAMAiAYBkgcFMS4yLjKgB4sg&sclient=gws-wiz-serp">
+    <img src="street.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Street Photography</div>
+</div>
+</body>
+<script src="slider.js"></script>
+    <script src="p3.js"></script>
+    <script src="iframe.js"></script>
+</html>

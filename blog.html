@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Add a gray background color with some padding */
+      body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f1f1f1;
+      }
+
+      /* Header/Blog Title */
+      .header {
+        padding: 30px;
+        font-size: 40px;
+        text-align: center;
+        background: white;
+      }
+
+      /* Create two unequal columns that floats next to each other */
+      /* Left column */
+      .leftcolumn {
+        float: left;
+        width: 75%;
+      }
+
+      /* Right column */
+      .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+      }
+
+      /* Fake image */
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+
+      /* Add a card effect for articles */
+      .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+        margin-top: 20px;
+      }
+
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div class="topnav">
+      <a  href="main.html"><img id="i1" src="logo.png" alt=""></a>
+      <a class="active n" href="index.html">Home</a>
+      <a class="n" href="feedback.html">Feedback</a>
+      <a class="n" href="gallery.html">Gallery</a>
+      <a class="n" href="about.html">About</a>
+      
+      
+
+      <div id="d1">
+        <div id="banner">localtime</div>
+        <div id="clock"></div>
+      </div>
+      <input
+        id="s1"
+        type="text"
+        placeholder="Search.."
+        onkeydown="search(event)"
+      />
+    </div>
+    <div id="container" class="container">
+      <div class="iframe-container">
+        <iframe id="blogFrame" src=""></iframe>
+      </div>
+      <div class="iframe-container">
+        <iframe id="imagesFrame" src=""></iframe>
+      </div>
+    </div>
+
+    <div style="background-color:rgb(142, 120, 120);color:white;" class="header">
+      <h2>Photography Colony Blog</h2>
+      <p>Inspiring Stories, Tips, and Techniques for Photographers</p>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>Somerset Island</h2>
+          <h5>Dec 7, 2017</h5>
+          <div class="fakeimg" style="height: 200px"><img style="height: 170px; width: 800px;" src="popular.jpg" alt=""></div>
+          <p>
+            This uninhabited Canadian island 500 miles north of the Arctic Circle is incredible for whale watching. There are large numbers of beluga whales on Somerset Island in the summer, and you might also get to kayak alongside white whales. Hiking around the island’s canyons, you’ll also find 8000-year old bowhead whale skeletons in the tundra. You might also get the chance to photograph polar bears, narwhals, and Arctic terns and snow geese
+          </p>
+        </div>
+        <div class="card">
+          <h2>Franz Josef Land</h2>
+          <h5> Sep 2, 2017</h5>
+          <div class="fakeimg" style="height: 200px"><img style="height: 170px; width: 800px;" src="popular1.jpg" alt=""></div>
+          <p>
+            The remote rarely visited archipelago in the Russian High Arctic is uninhabited and amazing for dramatic and diverse wildlife photography. It’s also steeped in Arctic expedition history, and you can visit the site of Fridtjof Nansen’s camp at Cape Norway. You can only really go during the summer, and even then sea ice can make it tricky to explore. Although temperatures are fairly warm for this sort of environment – just above freezing! And 85 percent of the archipelago is made up of glaciers – which are stunning to behold.
+          </p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>About Me</h2>
+          <div class="fakeimg" style="height: 100px"><img style="height: 70px; width: 120px;" src="profile.jpg" alt=""></div>
+          <p>I'm Aisha Khan, the founder and CEO of Photography Colony, with over 15 years of experience in the photography industry. I specialize in capturing stunning landscapes and vibrant street photography. My mission is to inspire and connect photographers worldwide through our dynamic community.
+
+          </p>
+        </div>
+        <div class="card">
+          <h3>Popular Post</h3>
+          <div class="fakeimg"><img style="height: 70px; width: 120px;" src="blog1.jpg" alt=""></div>
+          <br />
+          <div class="fakeimg"><img style="height: 70px; width: 120px;" src="blog2.jpg" alt=""></div>
+          <br />
+          <div class="fakeimg"><img style="height: 70px; width: 120px;" src="blog3.jpg" alt=""></div>
+        </div>
+        <div class="card">
+          <h3>Follow Me</h3>
+          <p>aishakhan@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <footer style="background-color:rgb(106, 95, 95); color: white; padding: 20px 0; margin-top: 20px;">
+      <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+          <!-- Company Info -->
+          <div style="flex: 1; min-width: 250px; padding: 20px;">
+              <h3 style="margin-bottom: 15px;">About Us</h3>
+              <p>Welcome to Photography Colony, a friendly community for everyone who loves taking photos. We offer simple tips, gear reviews, and a space to share your work and get inspired. Join us and be part of a supportive group that celebrates the joy of photography.</p>
+          </div>
+          
+          <!-- Useful Links -->
+          <div style="flex: 1; min-width: 250px; padding: 20px;">
+              <h3 style="margin-bottom: 15px;">Useful Links</h3>
+              <ul style="list-style: none; padding: 0;">
+                  <li style="margin-bottom: 10px;"><a href="main.html" style="color: white; text-decoration: none;">Home</a></li>
+                  <li style="margin-bottom: 10px;"><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+                  <li style="margin-bottom: 10px;"><a href="http://localhost/batch3_evening/create1.php" style="color: white; text-decoration: none;">Signup</a></li>
+                  <li style="margin-bottom: 10px;"><a href="gallery.html" style="color: white; text-decoration: none;">Gallery</a></li>
+                  <li style="margin-bottom: 10px;"><a href="blog.html" style="color: white; text-decoration: none;">Blog</a></li>
+              </ul>
+          </div>
+          
+          <!-- Social Media -->
+          <div style="flex: 1; min-width: 250px; padding: 0px;">
+              <h3 style="margin-bottom: 15px; ">Follow Us</h3>
+              <div>
+                  <a href="#" style="margin-right: 1px;"><img src="facebook.png" alt="Facebook" style="width: 26; height: 25px; "></a>
+                  <a href="#" style="margin-right: 1px;"><img src="twitter.png" alt="Twitter" style="width: 26; height: 25px; "></a>
+                  <a href="#" style="margin-right: 1px;"><img src="instragram.png" alt="Instagram" style="width: 26; height: 25px; "></a>
+                  <a href="#"><img src="linkedin.png" alt="LinkedIn" style="width: 26; height: 25px; "></a>
+              </div>
+          </div>
+          
+          <!-- Partner Logos -->
+          <div style="flex: 1; min-width: 250px; padding: 20px;">
+              <h3 style="margin-bottom: 15px;">Our Partners</h3>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                  <img src="profile3.jpg" alt="Partner 1" style="width: 60px; height: 50px;">
+                  <img src="profile4.jpg" alt="Partner 2" style="width: 60px; height: 50px;">
+                 
+              </div>
+          </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div style="text-align: center; padding: 10px; background-color:rgb(142, 120, 120);">
+          <p style="margin: 0;">&copy; 2024 Your Company Name. All Rights Reserved.</p>
+      </div>
+    </footer>
+    
+  </body>
+  <script src="slider.js"></script>
+    <script src="p3.js"></script>
+    <script src="iframe.js"></script>
+  
+</html>

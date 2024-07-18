@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+#card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+#about-section {
+  padding: 50px;
+  text-align: center;
+  background-color:rgb(142, 120, 120);
+  color: white;
+}
+
+#container {
+  padding: 0 16px;
+}
+
+#container::after, #row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#title {
+  color: grey;
+}
+
+#button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+#button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+  <div class="topnav">
+    <a  href="main.html"><img id="i1" src="logo.png" alt=""></a>
+    <a class="active n" href="index.html">Home</a>
+    <a class="n" href="feedback.html">Feedback</a>
+    <a class="n" href="gallery.html">Gallery</a>
+    <a class="n" href="blog.html">Blog</a>
+   
+
+    <div id="d1">
+      <div id="banner">localtime</div>
+      <div id="clock"></div>
+    </div>
+    <input
+      id="s1"
+      type="text"
+      placeholder="Search.."
+      onkeydown="search(event)"
+    />
+  </div>
+  <div id="container" class="container">
+    <div class="iframe-container">
+      <iframe id="blogFrame" src=""></iframe>
+    </div>
+    <div class="iframe-container">
+      <iframe id="imagesFrame" src=""></iframe>
+    </div>
+  </div>
+
+<div id="about-section">
+  <h1>About Us</h1>
+  <p>Photography Colony is a vibrant community of photography enthusiasts, professionals, and learners who share a passion for capturing the world through a lens. Founded in 2021, our mission is to inspire, educate, and connect photographers from around the globe.</p>
+  <!-- <p>Resize the browser window to see that this page is responsive by the way.</p> -->
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div id="row">
+  <div id="column">
+    <div id="card">
+      <img src="profile.jpg" alt="Jane" style="width:100%; height: 200px;" >
+      <div id="container">
+        <h2>Aisha Khan</h2>
+        <p id="title"><b>CEO & Founder</b></p>
+        <p>Aisha is the driving force behind Photography Colony, bringing over 15 years of experience in the photography industry. She oversees the strategic direction and vision of our community.</p>
+        <p><b>aishakhan@gmail.com</b></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="column">
+    <div id="card">
+      <img src="profile1.jpg" alt="Mike" style="width:100%; height: 200px;">
+      <div id="container">
+        <h2>Zara Ali</h2>
+        <p id="title"><b>Community Manager</b></p>
+        <p>Zara is responsible for building and maintaining a vibrant, welcoming community. She manages our forums, social media interactions, and member engagement.</p>
+        <p><b>zaraali@gmail.com</b></p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="column">
+    <div id="card">
+      <img src="profile2.jpg" alt="John" style="width:100%; height: 200px;">
+      <div id="container">
+        <h2>Fatima Ahmed</h2>
+        <p id="title"><b>Events Coordinator</b></p>
+        <p>Fatima organizes our virtual and in-person events, including workshops, meetups, and contests. Contact her for any event-related questions or participation details.</p>
+        <p><b>fatimaahmed@gmail.com</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="background-color:rgb(106, 95, 95); color: white; padding: 20px 0; margin-top: 20px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      <!-- Company Info -->
+      <div style="flex: 1; min-width: 250px; padding: 20px;">
+          <h3 style="margin-bottom: 15px;">About Us</h3>
+          <p>Welcome to Photography Colony, a friendly community for everyone who loves taking photos. We offer simple tips, gear reviews, and a space to share your work and get inspired. Join us and be part of a supportive group that celebrates the joy of photography.</p>
+      </div>
+      
+      <!-- Useful Links -->
+      <div style="flex: 1; min-width: 250px; padding: 20px;">
+          <h3 style="margin-bottom: 15px;">Useful Links</h3>
+          <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 10px;"><a href="main.html" style="color: white; text-decoration: none;">Home</a></li>
+              <li style="margin-bottom: 10px;"><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+              <li style="margin-bottom: 10px;"><a href="http://localhost/batch3_evening/create1.php" style="color: white; text-decoration: none;">Signup</a></li>
+              <li style="margin-bottom: 10px;"><a href="gallery.html" style="color: white; text-decoration: none;">Gallery</a></li>
+              <li style="margin-bottom: 10px;"><a href="blog.html" style="color: white; text-decoration: none;">Blog</a></li>
+          </ul>
+      </div>
+      
+      <!-- Social Media -->
+      <div style="flex: 1; min-width: 250px; padding: 0px;">
+          <h3 style="margin-bottom: 15px; ">Follow Us</h3>
+          <div>
+              <a href="#" style="margin-right: 1px;"><img src="facebook.png" alt="Facebook" style="width: 26; height: 25px; "></a>
+              <a href="#" style="margin-right: 1px;"><img src="twitter.png" alt="Twitter" style="width: 26; height: 25px; "></a>
+              <a href="#" style="margin-right: 1px;"><img src="instragram.png" alt="Instagram" style="width: 26; height: 25px; "></a>
+              <a href="#"><img src="linkedin.png" alt="LinkedIn" style="width: 26; height: 25px; "></a>
+          </div>
+      </div>
+      
+      <!-- Partner Logos -->
+      <div style="flex: 1; min-width: 250px; padding: 20px;">
+          <h3 style="margin-bottom: 15px;">Our Partners</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+              <img src="profile3.jpg" alt="Partner 1" style="width: 60px; height: 50px;">
+              <img src="profile4.jpg" alt="Partner 2" style="width: 60px; height: 50px;">
+             
+          </div>
+      </div>
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div style="text-align: center; padding: 10px; background-color:rgb(142, 120, 120);">
+      <p style="margin: 0;">&copy; 2024 Your Company Name. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+<script src="slider.js"></script>
+    <script src="p3.js"></script>
+    <script src="iframe.js"></script>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div class="topnav">
+      <a href="main.html"><img id="i1" src="logo.png" alt="" /></a>
+      <a class="active n" href="index.html">Home</a>
+      <a class="n" href="feedback.html">Feedback</a>
+      <a class="n" href="gallery.html">Gallery</a>
+      <a class="n" href="about.html">About</a>
+      <a class="n" href="blog.html">Blog</a>
+    
+
+      <div id="d1">
+        <div id="banner">localtime</div>
+        <div id="clock"></div>
+      </div>
+      <input
+        id="s1"
+        type="text"
+        placeholder="Search.."
+        onkeydown="search(event)"
+      />
+    </div>
+
+    <div id="container" class="container">
+      <div class="iframe-container">
+        <iframe id="blogFrame" src=""></iframe>
+      </div>
+      <div class="iframe-container">
+        <iframe id="imagesFrame" src=""></iframe>
+      </div>
+    </div>
+
+    <div id="slider" class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="mountain.jpg" style="width: 100%" />
+        <div id="text">
+          Welcome to our captivating photography colony
+        </div>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="tree.jpg" style="width: 100%"  />
+        <div id="text">
+          Welcome to our captivating photography colony
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="waterfall.jpg" style="width: 100%" />
+        <div id="text">
+          Welcome to our captivating photography colony
+          </div>        
+        </div>
+      </div>
+</div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+
+<div>
+  <div id="overlay" onclick="off()">
+    <div id="t1">Welcome To My photography Colony</div>
+  </div>
+  <div style="background-color: rgb(3, 4, 4); color: cadetblue; font-size: 40px; width: 150px; text-align: center; margin-left: 550px; border-radius: 30px; box-shadow: 1px 2px 3px 4px rgb(20, 19, 17); margin-top: 40px; font-weight: 600;">
+  About us</div>
+
+  <div>
+    <button id="btn1" onclick="on()">Poke me</button>
+    
+  </div>
+  
+</div>
+
+
+</div>
+<div style="display: flex; margin-top: -90px;">
+  <div class="card2">
+    <img id="i2" src="nature1.jpg" alt="John" style="width:100%" >
+    <h1>Ethan Harper</h1>
+    <p class="title2">NATURE photography</p>
+    <p>Institute of Photographic Arts</p>
+    <div style="margin: 24px 0;">
+      <a id="a2" href="#"><i class="fa fa-dribbble"></i></a> 
+      <a id="a2" href="#"><i class="fa fa-twitter"></i></a>  
+      <a id="a2" href="#"><i class="fa fa-linkedin"></i></a>  
+      <a id="a2"  href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+  </div>
+
+  <div class="card2">
+    <img id="i2" src="wildlife.jpg" alt="John" style="width:100%" >
+    <h1>Sophie Thompson</h1>
+    <p class="title2">WILDLIFE photography</p>
+    <p>Wildlife Photography Society</p>
+    <div style="margin: 24px 0;">
+      <a id="a2" href="#"><i class="fa fa-dribbble"></i></a> 
+      <a id="a2" href="#"><i class="fa fa-twitter"></i></a>  
+      <a id="a2" href="#"><i class="fa fa-linkedin"></i></a>  
+      <a id="a2" href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+  </div>
+</div>
+
+
+<footer style="background-color:rgb(106, 95, 95); color: white; padding: 20px 0; margin-top: 20px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+      <div style="flex: 1; min-width: 250px; padding: 20px;">
+          <h3 style="margin-bottom: 15px;">About Us</h3>
+          <p>Welcome to Photography Colony, a friendly community for everyone who loves taking photos. We offer simple tips, gear reviews, and a space to share your work and get inspired. Join us and be part of a supportive group that celebrates the joy of photography.</p>
+      </div>
+      
+      <div style="flex: 1; min-width: 250px; padding: 20px;">
+          <h3 style="margin-bottom: 15px;">Useful Links</h3>
+          <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 10px;"><a href="main.html" style="color:white; text-decoration: none;">Home</a></li>
+              <li style="margin-bottom: 10px;"><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+              <li style="margin-bottom: 10px;"><a href="http://localhost/batch3_evening/create1.php" style="color: white; text-decoration: none;">Signup</a></li>
+              <li style="margin-bottom: 10px;"><a href="gallery.html" style="color: white; text-decoration: none;">Gallery</a></li>
+              <li style="margin-bottom: 10px;"><a href="blog.html" style="color: white; text-decoration: none;">Blog</a></li>
+          </ul>
+      </div>
+      
+      <div style="flex: 1; min-width: 250px; padding: 0px;">
+          <h3 style="margin-bottom: 15px; ">Follow Us</h3>
+          <div>
+              <a href="#" style="margin-right: 1px;"><img src="facebook.png" alt="Facebook" style="width: 26; height: 25px; "></a>
+              <a href="#" style="margin-right: 1px;"><img src="twitter.png" alt="Twitter" style="width: 26; height: 25px; "></a>
+              <a href="#" style="margin-right: 1px;"><img src="instragram.png" alt="Instagram" style="width: 26; height: 25px; "></a>
+              <a href="#"><img src="linkedin.png" alt="LinkedIn" style="width: 26; height: 25px; "></a>
+          </div>
+      </div>
+      
+    
+      <div style="flex: 1; min-width: 250px; padding: 20px;">
+          <h3 style="margin-bottom: 15px;">Our Partners</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+              <img src="profile3.jpg" alt="Partner 1" style="width: 60px; height: 50px;">
+              <img src="profile4.jpg" alt="Partner 2" style="width: 60px; height: 50px;">
+             
+          </div>
+      </div>
+  </div>
+  
+  <div style="text-align: center; padding: 10px; background-color:rgb(142, 120, 120);">
+      <p style="margin: 0;">&copy; 2024 Your Company Name. All Rights Reserved.</p>
+  </div>
+</footer>
+
+    <script src="slider.js"></script>
+    <script src="p3.js"></script>
+    <script src="iframe.js"></script>
+    <script src="overlay.js"></script>
+  </body>
+</html>
